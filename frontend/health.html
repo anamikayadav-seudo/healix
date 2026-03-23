@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Daily Health Tracker – Healix.AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div id="header"></div>
+
+<div class="bg-overlay"></div>
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+
+<section class="section section-dark text-center">
+
+<div class="container">
+
+<h1 class="section-title">
+
+<i class="bi bi-heart-pulse me-2"></i>
+Daily Health Tracker
+
+</h1>
+
+
+<p class="section-text mt-3">
+
+Track your wellness score with AI-powered insights.
+
+</p>
+
+
+
+<div class="row mt-5 g-4">
+
+<div class="col-md-4">
+<div class="glass-card p-3">
+<input type="number" id="height"
+placeholder="Height (cm)"
+class="form-control">
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="glass-card p-3">
+<input type="number" id="weight"
+placeholder="Weight (kg)"
+class="form-control">
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="glass-card p-3">
+<input type="number" id="steps"
+placeholder="Steps walked"
+class="form-control">
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="glass-card p-3">
+<input type="number" id="sleep"
+placeholder="Sleep hours"
+class="form-control">
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="glass-card p-3">
+<input type="number" id="water"
+placeholder="Water intake (L)"
+class="form-control">
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="glass-card p-3">
+<input type="number" id="calories"
+placeholder="Calories intake"
+class="form-control">
+</div>
+</div>
+
+</div>
+
+
+<button onclick="analyzeHealth()"
+class="btn btn-main mt-5 px-5">
+
+Analyze Health Score
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<section class="section text-center">
+
+<div class="container">
+
+<div id="healthResults" class="row g-4 mt-4">
+
+<!-- BMI -->
+<div class="col-md-4">
+<div class="glass-card result-card">
+
+<h4><i class="bi bi-heart-pulse text-danger"></i> BMI</h4>
+
+<h2 id="bmiResult"></h2>
+
+<p id="bmiStatus"></p>
+
+</div>
+</div>
+
+
+<!-- BMR -->
+<div class="col-md-4">
+<div class="glass-card result-card">
+
+<h4><i class="bi bi-lightning-charge text-warning"></i> BMR</h4>
+
+<h2 id="bmrResult"></h2>
+
+<p id="bmrExplanation"></p>
+
+</div>
+</div>
+
+
+<!-- Health Score -->
+<div class="col-md-4">
+<div class="glass-card result-card">
+
+<h4><i class="bi bi-activity text-success"></i> Health Score</h4>
+
+<svg viewBox="0 0 200 120" class="gauge">
+
+<path d="M20 100 A80 80 0 0 1 180 100"
+stroke="#ffffff33"
+stroke-width="14"
+fill="none"/>
+
+<path id="gaugeFill"
+d="M20 100 A80 80 0 0 1 180 100"
+stroke="#ff4444"
+stroke-width="14"
+stroke-linecap="round"
+stroke-dasharray="251"
+stroke-dashoffset="251"
+fill="none"/>
+
+</svg>
+
+<h2 id="scoreResult"></h2>
+
+<p id="scoreStatus"></p>
+
+</div>
+</div>
+
+
+<!-- Alerts -->
+<div class="col-md-6">
+<div class="glass-card result-card">
+
+<h4><i class="bi bi-exclamation-triangle text-warning"></i> Risk Alerts</h4>
+
+<p id="alerts"></p>
+
+</div>
+</div>
+
+
+<!-- Suggestions -->
+<div class="col-md-6">
+<div class="glass-card result-card">
+
+<h4><i class="bi bi-robot"></i> AI Suggestions</h4>
+
+<p id="aiSuggestions"></p>
+
+</div>
+</div>
+
+
+<!-- Summary -->
+<div class="col-md-12">
+<div class="glass-card result-card">
+
+<h4><i class="bi bi-clipboard-data"></i> Health Summary</h4>
+
+<p id="aiSummary"></p>
+
+</div>
+</div>
+<button
+class="btn btn-main mt-4"
+onclick="window.open('http://localhost:5000/download-report')"
+>
+Download Health Report
+</button>
+</div>
+
+</div>
+
+</section>
+
+
+
+<div id="footer"></div>
+
+
+<script src="js/components.js"></script>
+<script src="js/health.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healix.AI – AI Health Intelligence Platform</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="bg-overlay"></div>
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero text-white">
+<div class="container">
+<div class="row align-items-center">
+
+<div class="col-lg-6 text-lg-start text-center">
+<h1 class="hero-title">
+AI-Powered Health Intelligence Platform
+</h1>
+
+<p class="hero-sub mt-4">
+Healix.AI combines machine learning, explainable AI reasoning,
+and intelligent specialist mapping to provide preventive healthcare insights in seconds.
+</p>
+
+<p class="hero-sub-small mt-3">
+Built for awareness. Designed for clarity. Focused on prevention.
+</p>
+
+<div class="mt-4">
+<a href="#" onclick="goToScan()" class="btn btn-main me-3">
+Start Free Diagnosis
+</a>
+<a href="contact.html" class="btn btn-outline-light">Contact Our Team</a>
+
+</div>
+
+<div class="trust-stats mt-4">
+<span><strong>25,000+</strong> Active Users</span>
+<span class="ms-4"><strong>120,000+</strong> Predictions Generated</span>
+</div>
+</div>
+
+<div class="col-lg-6 mt-5 mt-lg-0">
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<img src="https://images.unsplash.com/photo-1581090700227-4c4f50f28a38" class="d-block w-100 hero-img">
+</div>
+
+<div class="carousel-item">
+<img src="https://images.unsplash.com/photo-1559757175-5700dde675bc" class="d-block w-100 hero-img">
+</div>
+
+<div class="carousel-item">
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67" class="d-block w-100 hero-img">
+</div>
+
+<div class="carousel-item">
+<img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f" class="d-block w-100 hero-img">
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section section-dark text-center">
+<div class="container">
+<h2 class="section-title">What is Healix.AI?</h2>
+<p class="mt-4 section-text">
+Healix.AI is an AI-powered preventive healthcare platform designed to bridge
+the gap between symptom awareness and specialist consultation.
+Our system integrates structured machine learning models,
+explainable AI reasoning engines, and intelligent doctor mapping logic
+to provide meaningful insights within seconds.
+</p>
+</div>
+</section>
+
+<!-- ================= AI WORKFLOW ================= -->
+<section class="section section-light text-center">
+<div class="container">
+<h2 class="section-title">How It Works</h2>
+
+<div class="row mt-5">
+
+<div class="col-md-3 reveal">
+<h5>1. Enter Symptoms</h5>
+<p>Users input structured symptom data through a guided interface.</p>
+</div>
+
+<div class="col-md-3 reveal">
+<h5>2. ML Prediction</h5>
+<p>RandomForest classification model predicts probable conditions.</p>
+</div>
+
+<div class="col-md-3 reveal">
+<h5>3. AI Explanation</h5>
+<p>Groq LLaMA generates human-readable reasoning.</p>
+</div>
+
+<div class="col-md-3 reveal">
+<h5>4. Specialist Mapping</h5>
+<p>Disease → Specialty → Recommended Doctor pathway.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section section-dark text-center">
+<div class="container">
+<h2 class="section-title">Core Capabilities</h2>
+
+<div class="row g-4 mt-5">
+
+<div class="col-md-4 reveal">
+<div class="card-glass">
+<i class="bi bi-heart-pulse-fill icon"></i>
+<h5>AI Disease Prediction</h5>
+<p>ML classification trained on structured symptom datasets.</p>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="card-glass">
+<i class="bi bi-cpu-fill icon"></i>
+<h5>Explainable AI Reasoning</h5>
+<p>Transparent insights powered by Groq LLaMA 3.1 architecture.</p>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="card-glass">
+<i class="bi bi-person-badge-fill icon"></i>
+<h5>Specialist Recommendation</h5>
+<p>Automated mapping from predicted disease to relevant specialist.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ================= HEALTH TRACKER ================= -->
+<section class="section section-light text-center">
+<div class="container">
+<h2 class="section-title">Health Tracker Module</h2>
+<p class="section-text mt-4">
+Monitor BMI, calorie intake, and lifestyle scoring to promote long-term preventive care.
+</p>
+</div>
+</section>
+
+<!-- ================= HOSPITAL FINDER ================= -->
+<section class="section section-dark text-center">
+<div class="container">
+<h2 class="section-title">Hospital Finder</h2>
+<p class="section-text mt-4">
+Locate nearby hospitals and emergency services instantly.
+Designed to support rapid decision-making in urgent situations.
+</p>
+</div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="section section-light text-center">
+<div class="container">
+<h2 class="section-title">Trusted Platform</h2>
+
+<div class="row mt-5">
+<div class="col-md-3 reveal"><h3>25K+</h3><p>Active Users</p></div>
+<div class="col-md-3 reveal"><h3>120K+</h3><p>Predictions</p></div>
+<div class="col-md-3 reveal"><h3>95%</h3><p>Accuracy</p></div>
+<div class="col-md-3 reveal"><h3>4.8★</h3><p>User Rating</p></div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="section section-dark text-center">
+<div class="container">
+<h2 class="section-title">User Reviews</h2>
+
+<div class="row mt-5">
+<div class="col-md-4 reveal">
+<div class="card-glass">
+<p>"Healix gave me clarity before visiting a doctor."</p>
+<h6>— Aarav</h6>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="card-glass">
+<p>"AI explanation is extremely transparent and easy to understand."</p>
+<h6>— Meera</h6>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="card-glass">
+<p>"Specialist mapping reduced my confusion significantly."</p>
+<h6>— Kabir</h6>
+</div>
+</div>
+</div>
+
+<a href="review.html" class="btn btn-main mt-4">
+Leave a Review (Coming Soon)
+</a>
+
+
+</div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section section-light text-center">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+<p class="section-text mt-4">
+Email: support@healixai.com<br>
+Phone: +91 98765 43210<br>
+Healix.AI R&D Center – Mumbai, India
+</p>
+<a href="contact.html" class="btn btn-main mt-3">Get In Touch</a>
+
+</div>
+</section>
+
+<div id="footer"></div>
+<script src="js/history.js"></script>
+<script src="js/main.js"></script>
+<script src="js/components.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/theme.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

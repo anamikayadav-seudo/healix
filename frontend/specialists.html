@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Find Specialist – Healix.AI</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<section class="section text-center">
+
+<div class="container">
+
+<h2>Consult a Specialist</h2>
+
+<div class="row mt-4">
+
+<div class="col-md-5">
+
+<input
+id="diseaseInput"
+class="form-control"
+placeholder="Enter disease (example: Migraine)"
+
+>
+
+</div>
+
+<div class="col-md-5">
+
+<input
+id="locationInput"
+class="form-control"
+placeholder="Enter city (example: Nashik)"
+
+>
+
+</div>
+
+<div class="col-md-2">
+
+<button
+class="btn btn-main"
+onclick="findSpecialist()"
+
+>
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div id="specialistResults"
+class="row g-4"
+style="display:none">
+
+</div>
+
+</div>
+
+</section>
+
+<script src="js/specialists.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,675 @@
+/* ======================================================
+   HEALIX.AI GLOBAL DESIGN SYSTEM
+   DEFAULT = LIGHT HEALTHCARE THEME
+   SECONDARY = DARK MODE (body.dark)
+====================================================== */
+
+
+/* ======================================================
+   GLOBAL BODY BACKGROUND
+====================================================== */
+
+body {
+
+  font-family: 'Inter', sans-serif;
+
+  color: #1f2937;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #b9f5d8,
+    #e5dcff,
+    #c8f8e4,
+    #dcd2ff
+  );
+
+  background-size: 300% 300%;
+
+  animation: gradientFlow 22s ease infinite;
+
+  transition: all 0.4s ease;
+
+}
+
+
+/* animated gradient */
+
+@keyframes gradientFlow {
+
+  0% { background-position: 0% 50%; }
+
+  50% { background-position: 100% 50%; }
+
+  100% { background-position: 0% 50%; }
+
+}
+
+
+
+/* ======================================================
+   SOFT BACKGROUND BLOBS
+====================================================== */
+
+.bg-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.25), transparent 40%),
+
+    radial-gradient(circle at 85% 80%, rgba(255,255,255,0.18), transparent 40%);
+
+  pointer-events: none;
+
+  z-index: -2;
+
+}
+
+
+.blob {
+
+  position: fixed;
+
+  width: 600px;
+
+  height: 600px;
+
+  border-radius: 50%;
+
+  filter: blur(160px);
+
+  opacity: 0.45;
+
+  z-index: -3;
+
+  animation: blobMove 30s infinite alternate ease-in-out;
+
+}
+
+
+.blob1 {
+
+  background: #c7f9e5;
+
+  top: -150px;
+
+  left: -150px;
+
+}
+
+
+.blob2 {
+
+  background: #d9ccff;
+
+  bottom: -150px;
+
+  right: -150px;
+
+}
+
+
+.blob3 {
+
+  background: #bff3e2;
+
+  top: 40%;
+
+  left: 60%;
+
+}
+
+
+@keyframes blobMove {
+
+  0% { transform: translate(0,0); }
+
+  100% { transform: translate(80px,60px); }
+
+}
+
+
+
+/* ======================================================
+   NAVBAR GLASS STYLE
+====================================================== */
+
+.custom-nav {
+
+  backdrop-filter: blur(18px);
+
+  background: rgba(255,255,255,0.45);
+
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+
+  padding: 12px 0;
+
+}
+
+
+.navbar-brand {
+
+  font-weight: 700;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 1.4rem;
+
+}
+
+
+.nav-link {
+
+  color: #1f2937 !important;
+
+  margin: 0 10px;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+}
+
+
+.nav-link:hover {
+
+  color: #8b5cf6 !important;
+
+}
+
+
+.theme-btn {
+
+  background: rgba(255,255,255,0.55);
+
+  border: none;
+
+  border-radius: 50%;
+
+  padding: 8px 10px;
+
+  color: #1f2937;
+
+}
+
+
+
+/* ======================================================
+   HERO SECTION
+====================================================== */
+
+.hero {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-top: 120px;
+
+  background:
+
+  radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,0.55),
+    transparent 50%
+  ),
+
+  radial-gradient(
+    circle at 80% 80%,
+    rgba(255,255,255,0.35),
+    transparent 50%
+  );
+
+}
+
+
+.hero-title {
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 3.2rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+}
+
+
+.hero-sub {
+
+  font-size: 1.2rem;
+
+  opacity: 0.95;
+
+  max-width: 550px;
+
+}
+
+
+.hero-sub-small {
+
+  font-size: 1rem;
+
+  opacity: 0.85;
+
+}
+.hero-title {
+
+  color: #111827;
+
+}
+
+.hero-sub {
+
+  color: #374151;
+
+}
+
+.hero-sub-small {
+
+  color: #6b7280;
+
+}
+
+.hero-img {
+
+  border-radius: 20px;
+
+  box-shadow: 0 30px 80px rgba(139,92,246,0.25);
+
+}
+
+
+
+/* ======================================================
+   SECTION SYSTEM
+====================================================== */
+
+.section {
+
+  padding: 120px 0;
+
+}
+
+
+.section-dark {
+
+  background: rgba(255,255,255,0.55);
+
+  backdrop-filter: blur(25px);
+
+}
+
+
+.section-light {
+
+  background: rgba(255,255,255,0.85);
+
+  backdrop-filter: blur(20px);
+
+}
+
+
+.section-title {
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 2.4rem;
+
+  font-weight: 700;
+
+  position: relative;
+
+  display: inline-block;
+  
+  color: #111827;
+}
+
+
+.section-title::after {
+
+  content: "";
+
+  position: absolute;
+
+  bottom: -12px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90px;
+
+  height: 4px;
+
+  background: linear-gradient(90deg,#6ee7b7,#8b5cf6);
+
+  border-radius: 10px;
+
+}
+
+
+.section-text {
+
+  max-width: 800px;
+
+  margin: auto;
+
+  font-size: 1.05rem;
+
+  opacity: 0.95;
+
+  line-height: 1.8;
+
+}
+
+
+
+/* ======================================================
+   GLASS CARDS
+====================================================== */
+
+.card-glass {
+
+  background: rgba(255,255,255,0.55);
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.35);
+
+  backdrop-filter: blur(16px);
+
+  transition: 0.4s;
+
+}
+
+
+.card-glass:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(139,92,246,0.25);
+
+}
+
+
+.icon {
+
+  font-size: 2rem;
+
+  margin-bottom: 15px;
+
+  color: #8b5cf6;
+
+}
+
+
+
+/* ======================================================
+   TRUST STATS
+====================================================== */
+
+.trust-stats span {
+
+  color: #4b5563;
+
+  font-size: 0.95rem;
+
+  opacity: 1;
+
+}
+
+h3 {
+
+  font-weight: 700;
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+/* ======================================================
+   PRIMARY BUTTON STYLE
+====================================================== */
+
+.btn-main {
+
+  background: linear-gradient(
+
+    135deg,
+
+    #6ee7b7,
+
+    #8b5cf6
+
+  );
+
+  border: none;
+
+  color: white;
+
+  padding: 12px 28px;
+
+  border-radius: 40px;
+
+  font-weight: 600;
+
+  transition: 0.4s;
+
+  box-shadow: 0 12px 35px rgba(139,92,246,0.35);
+
+}
+
+
+.btn-main:hover {
+
+  transform: scale(1.07);
+
+}
+
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.footer {
+
+  padding: 60px 0;
+
+  background: rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(20px);
+
+}
+
+
+.footer-links a {
+
+  margin: 0 12px;
+
+  color: #1f2937;
+
+  text-decoration: none;
+
+  opacity: 0.85;
+
+}
+
+
+.footer-links a:hover {
+
+  opacity: 1;
+
+  color: #8b5cf6;
+
+}
+
+
+
+/* ======================================================
+   SCROLL REVEAL
+====================================================== */
+
+.reveal {
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition: 0.6s ease;
+
+}
+
+
+.reveal.active {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+
+
+/* ======================================================
+   DARK MODE THEME
+====================================================== */
+
+body.dark {
+
+  background: linear-gradient(
+
+    135deg,
+
+    #0f172a,
+
+    #1e1b4b,
+
+    #052e2b,
+
+    #1e293b
+
+  );
+
+  color: #e5e7eb;
+
+}
+
+
+body.dark .custom-nav {
+
+  background: rgba(0,0,0,0.55);
+
+}
+
+
+body.dark .nav-link {
+
+  color: white !important;
+
+}
+
+
+body.dark .section-dark {
+
+  background: rgba(0,0,0,0.45);
+
+}
+
+
+body.dark .section-light {
+
+  background: rgba(255,255,255,0.05);
+
+}
+
+
+body.dark .card-glass {
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+}
+
+
+body.dark .footer {
+
+  background: rgba(0,0,0,0.6);
+
+}
+/* ======================================================
+   FIX REMAINING WHITE TEXT (LIGHT MODE)
+====================================================== */
+
+/* Hero heading fallback override */
+
+.hero h1,
+.hero-title {
+
+  color: #1e293b !important;
+
+}
+
+
+/* Paragraph text */
+
+.hero p,
+.hero-sub {
+
+  color: #475569 !important;
+
+}
+
+
+/* Small tagline */
+
+.hero-sub-small {
+
+  color: #64748b !important;
+
+}
+
+
+/* Stats text */
+
+.trust-stats {
+
+  color: #475569 !important;
+
+}
+
+
+/* Navbar brand (Healix.AI text) */
+
+.navbar-brand {
+
+  color: #334155 !important;
+
+}
+
+
+/* Contact button text fix */
+
+.btn-outline-light {
+
+  color: #475569 !important;
+
+  border-color: rgba(71,85,105,0.25);
+
+}
